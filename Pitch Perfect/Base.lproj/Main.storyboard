@@ -164,7 +164,25 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rlo-b5-0MR">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Slow"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="33" id="B39-e1-skO"/>
+                                    <constraint firstAttribute="height" constant="30" id="XKU-Od-EfV"/>
+                                </constraints>
+                                <state key="normal" title="Slow">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="B39-e1-skO"/>
+                                        <exclude reference="XKU-Od-EfV"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="B39-e1-skO"/>
+                                        <include reference="XKU-Od-EfV"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="playSlowAudio:" destination="Sog-69-8wJ" eventType="touchUpInside" id="eOR-0f-KZf"/>
                                 </connections>
@@ -172,7 +190,25 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJO-q2-B5a">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Fast"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="O4h-d9-7go"/>
+                                    <constraint firstAttribute="width" constant="30" id="yyA-ty-0fn"/>
+                                </constraints>
+                                <state key="normal" title="Fast">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="O4h-d9-7go"/>
+                                        <exclude reference="yyA-ty-0fn"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="O4h-d9-7go"/>
+                                        <include reference="yyA-ty-0fn"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <action selector="playFastAudio:" destination="Sog-69-8wJ" eventType="touchUpInside" id="uRM-gT-7Sk"/>
                                 </connections>
@@ -201,6 +237,26 @@
                                     <action selector="stopAudio:" destination="Sog-69-8wJ" eventType="touchUpInside" id="8zr-0p-vbR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAK-5S-lsT">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="High">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChipmunkAudio:" destination="Sog-69-8wJ" eventType="touchUpInside" id="0Nc-A2-fGF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OUM-Jx-Zug">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Low">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playDarthAudio:" destination="Sog-69-8wJ" eventType="touchUpInside" id="i5Z-8o-pcj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -208,8 +264,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="MJO-q2-B5a" secondAttribute="trailing" constant="80" id="1qQ-jo-gTs"/>
                             <constraint firstItem="MJO-q2-B5a" firstAttribute="top" secondItem="NX8-EI-Khe" secondAttribute="bottom" constant="69" id="A2D-gS-D0i"/>
                             <constraint firstItem="KZL-YP-PpL" firstAttribute="centerX" secondItem="Il2-xg-gdR" secondAttribute="centerX" id="INt-T4-FZb"/>
+                            <constraint firstItem="EAK-5S-lsT" firstAttribute="leading" secondItem="Il2-xg-gdR" secondAttribute="leadingMargin" constant="61" id="IVB-3T-pLp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OUM-Jx-Zug" secondAttribute="trailing" constant="80" id="NMS-af-HHJ"/>
                             <constraint firstItem="h61-yx-Ciw" firstAttribute="top" secondItem="KZL-YP-PpL" secondAttribute="bottom" constant="74" id="Vam-Lt-1n8"/>
                             <constraint firstItem="Rlo-b5-0MR" firstAttribute="top" secondItem="NX8-EI-Khe" secondAttribute="bottom" constant="69" id="W99-e8-7d9"/>
+                            <constraint firstItem="h61-yx-Ciw" firstAttribute="top" secondItem="EAK-5S-lsT" secondAttribute="bottom" constant="235" id="aAg-pX-BjO"/>
+                            <constraint firstItem="h61-yx-Ciw" firstAttribute="top" secondItem="OUM-Jx-Zug" secondAttribute="bottom" constant="235" id="cqS-Gn-KBm"/>
                             <constraint firstItem="Rlo-b5-0MR" firstAttribute="leading" secondItem="Il2-xg-gdR" secondAttribute="leadingMargin" constant="61" id="kse-w0-JVd"/>
                         </constraints>
                         <variation key="default">
@@ -217,14 +277,20 @@
                                 <exclude reference="Rlo-b5-0MR"/>
                                 <exclude reference="MJO-q2-B5a"/>
                                 <exclude reference="KZL-YP-PpL"/>
+                                <exclude reference="EAK-5S-lsT"/>
+                                <exclude reference="OUM-Jx-Zug"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Vam-Lt-1n8"/>
-                                <exclude reference="INt-T4-FZb"/>
-                                <exclude reference="1qQ-jo-gTs"/>
-                                <exclude reference="A2D-gS-D0i"/>
                                 <exclude reference="W99-e8-7d9"/>
                                 <exclude reference="kse-w0-JVd"/>
+                                <exclude reference="1qQ-jo-gTs"/>
+                                <exclude reference="A2D-gS-D0i"/>
+                                <exclude reference="IVB-3T-pLp"/>
+                                <exclude reference="NMS-af-HHJ"/>
+                                <exclude reference="INt-T4-FZb"/>
+                                <exclude reference="Vam-Lt-1n8"/>
+                                <exclude reference="aAg-pX-BjO"/>
+                                <exclude reference="cqS-Gn-KBm"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -232,14 +298,20 @@
                                 <include reference="Rlo-b5-0MR"/>
                                 <include reference="MJO-q2-B5a"/>
                                 <include reference="KZL-YP-PpL"/>
+                                <include reference="EAK-5S-lsT"/>
+                                <include reference="OUM-Jx-Zug"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Vam-Lt-1n8"/>
-                                <include reference="INt-T4-FZb"/>
-                                <include reference="1qQ-jo-gTs"/>
-                                <include reference="A2D-gS-D0i"/>
                                 <include reference="W99-e8-7d9"/>
                                 <include reference="kse-w0-JVd"/>
+                                <include reference="1qQ-jo-gTs"/>
+                                <include reference="A2D-gS-D0i"/>
+                                <include reference="IVB-3T-pLp"/>
+                                <include reference="NMS-af-HHJ"/>
+                                <include reference="INt-T4-FZb"/>
+                                <include reference="Vam-Lt-1n8"/>
+                                <include reference="aAg-pX-BjO"/>
+                                <include reference="cqS-Gn-KBm"/>
                             </mask>
                         </variation>
                     </view>
